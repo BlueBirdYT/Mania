@@ -12,7 +12,7 @@ import os
 from discord import Game, Embed, Color, Status, ChannelType
 
 Forbidden= discord.Embed(title="Permission Denied", description="1) Please check whether you have permission to perform this action or not. \n2) Please check whether my role has permission to perform this action in this channel or not. \n3) Please check my role position.", color=0x00ff00)
-client = commands.Bot(description="Bot prefix is #", command_prefix=prefix, pm_help = True)
+client = commands.Bot(description="Bot prefix is #", command_prefix= prefix, pm_help = True)
 with open("prefixes.json") as f:
     prefixes = json.load(f)
 default_prefix = "#"
