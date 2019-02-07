@@ -1,9 +1,0 @@
-with open("prefixes.json") as f:
-    prefixes = json.load(f)
-default_prefix = "!"
-
-def prefix(bot, message):
-    id = message.server.id
-    return prefixes.get(id, default_prefix)
-
-bot = commands.Bot(command_prefix=prefix)
