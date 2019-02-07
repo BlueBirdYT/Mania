@@ -968,4 +968,4 @@ async def ownerinfo(ctx):
 
 
 
-client.run('NTQyNjcxNjU2OTg5MDk3OTg0.DzxaGA.3vquSuU8ESZmlmvZKLxqi8uilbk')
+client.run(os.getenv('Token'))
