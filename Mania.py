@@ -966,8 +966,43 @@ async def ownerinfo(ctx):
     embed.add_field(name="MANIA BOT is a custom bot for POKE MANIA ONLlY", value="its awesome :)")
     embed.add_field(name="link to invite me xD", value="https://discordapp.com/api/oauth2/authorize?client_id=542671656989097984&permissions=0&redirect_uri=https%3A%2F%2Fdiscord.gg%2FpsK6PxZ&scope=bot")
     await client.say(embed=embed)
-
-
+@client.command(pass_context = True)
+@commands.check(is_owner)
+async def sayy(ctx, *, msg = None):
+    await client.delete_message(ctx.message)
+    if ctx.message.author.bot:
+      return
+    else:
+      if not msg: await client.say("Please specify a message to send")
+        else: 
+            await client.say(msg)
+@client.command(pass_context = True)
+@commands.has_permissions(administrator=True)
+async def masssay(ctx, *, msg = None):
+    await client.delete_message(ctx.message)
+    if ctx.message.author.bot:
+      return
+    else:
+      if not msg: await client.say("Please specify a message to send")
+        else: 
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            await client.say(msg)
+            
 @client.command(pass_context = True)
 async def help(ctx):
     author = ctx.message.author
