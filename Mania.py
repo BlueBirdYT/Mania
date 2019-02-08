@@ -47,7 +47,7 @@ def is_owner(ctx):
 
 @client.event
 async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name='member')
+    role = discord.utils.get(member.server.roles, name='TRAINERS')
     await client.add_roles(member, role)
     print("In our server" + member.name + " just joined")
     r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
@@ -861,7 +861,7 @@ async def rolldice(ctx):
     await client.say(embed=em)
 
 @client.command(pass_context = True)
-@commands.check(is_owner)
+@commands.has_permissions(kick_members=True)
 async def say(ctx, *, msg = None):
     await client.delete_message(ctx.message)
     if ctx.message.author.bot:
