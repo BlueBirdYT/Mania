@@ -949,32 +949,7 @@ async def ownerinfo(ctx):
     await client.say(embed=embed)
 
     
-@client.command(pass_context = True)
-@commands.has_permissions(administrator=True)
-async def masssay(ctx, *, msg = None):
-    await client.delete_message(ctx.message)
-    if ctx.message.author.bot:
-      return
-    else:
-      if not msg: await client.say("Please specify a message to send")
-        else: 
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
-            await client.say(msg)
+
             
 @client.command(pass_context = True)
 async def help(ctx):
@@ -1054,8 +1029,6 @@ async def help3(ctx):
     embed.add_field(name = 'say', value ='make the bot say anything but administrator perms is required to use it',inline = False)
     embed.add_field(name = 'remind', value ='remind yourself',inline = False)
     embed.add_field(name = 'ownerinfo', value ='see the bots owner info',inline = False)
-    embed.add_field(name = 'sayy', value ='a command for devs only',inline = False)
-    embed.add_field(name = 'masssay', value ='a mass say command admins perms needed',inline = False)
     await client.send_message(author,embed=embed)
     await client.say('📨 Check DMs For Information')    
 
