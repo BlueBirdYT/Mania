@@ -895,7 +895,7 @@ async def on_message_edit(before, after):
 @client.event
 async def on_message_delete(message):
     if not message.author.bot:
-      channelname = 'server-log'
+    if channel.name = 'server-log'
       logchannel=None
       for channel in message.server.channels:
         if channel.name == channelname:
