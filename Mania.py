@@ -964,6 +964,7 @@ async def ownerinfo(ctx):
     embed.set_author(name=" Bot Owner ""BLUE OAK#1853")
     embed.add_field(name="Co-owner: BlueBird ❄ Froakie collector#0440", value="He coded the bot")
     embed.add_field(name="MANIA BOT is a custom bot for POKE MANIA ONLlY", value="its awesome :)")
+    embed.add_field(name="link to invite me xD", value="https://discordapp.com/api/oauth2/authorize?client_id=542671656989097984&permissions=0&redirect_uri=https%3A%2F%2Fdiscord.gg%2FpsK6PxZ&scope=bot")
     await client.say(embed=embed)
 
 
